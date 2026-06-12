@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Domande frequenti — Il Buongustaio · Prato</title>
+<meta name="description" content="Tutte le risposte alle domande più comuni sul Buongustaio: orari, prenotazioni, allergeni, consegne, pagamenti, feste, pesce del venerdì." />
+
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1A1612">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Buongustaio">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="FAQ — Il Buongustaio" />
+<meta property="og:description" content="Le risposte alle domande più comuni della bottega di Mezzana, Prato." />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:image" content="assets/foto/banco-famiglia.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Italianno&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cipresso: #2E3D2F;
+  --oliva: #5A6B47;
+  --oro: #A8843C;
+  --pietra: #F1EEE6;
+  --avorio: #F8F6F0;
+  --panna: #FDFDFB;
+  --inchiostro: #1A1612;
+  --grafite: #3D352B;
+  --polvere: #6E6450;
+  --linea-soft: rgba(168, 132, 60, 0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--panna);
+  color: var(--inchiostro);
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.faq-header {
+  background: var(--inchiostro);
+  padding: 22px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--oro);
+}
+.faq-header .brand {
+  font-family: 'Italianno', cursive;
+  font-size: 32px;
+  color: var(--panna);
+  text-decoration: none;
+}
+.faq-header .brand em { color: var(--oro); font-style: normal; }
+.faq-header nav { display: flex; gap: 24px; }
+.faq-header nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--panna);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 200ms;
+}
+.faq-header nav a:hover { border-bottom-color: var(--oro); }
+@media (max-width: 640px) {
+  .faq-header { padding: 16px 20px; flex-direction: column; gap: 12px; }
+  .faq-header nav { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .faq-header nav a { font-size: 10px; }
+}
+
+/* Hero */
+.faq-hero {
+  padding: 80px 24px 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--avorio) 0%, var(--panna) 100%);
+  border-bottom: 1px solid var(--linea-soft);
+}
+.faq-hero .occhiello {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--oro);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.faq-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  color: var(--inchiostro);
+}
+@media (min-width: 768px) { .faq-hero h1 { font-size: 64px; } }
+@media (min-width: 1024px) { .faq-hero h1 { font-size: 80px; } }
+.faq-hero h1 em { font-style: italic; color: var(--cipresso); }
+.faq-hero .sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--grafite);
+}
+
+/* Cerca rapida + categorie */
+.faq-quick {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+.search-box {
+  position: relative;
+  margin-bottom: 32px;
+}
+.search-box input {
+  width: 100%;
+  padding: 16px 20px 16px 56px;
+  border: 1px solid var(--linea-soft);
+  background: var(--panna);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--inchiostro);
+  transition: border 200ms;
+}
+.search-box input:focus { outline: 2px solid var(--oro); border-color: var(--oro); }
+.search-box::before {
+  content: '🔍';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.cat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.cat-chip {
+  padding: 8px 16px;
+  border: 1px solid var(--inchiostro);
+  background: transparent;
+  color: var(--inchiostro);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.cat-chip:hover { background: var(--inchiostro); color: var(--panna); }
+.cat-chip.active { background: var(--inchiostro); color: var(--oro); }
+
+/* Wrap principale */
+.faq-wrap { max-width: 900px; margin: 0 auto; padding: 50px 24px 80px; }
+
+.faq-categoria { margin-bottom: 48px; }
+.faq-categoria:last-child { margin-bottom: 0; }
+.cat-titolo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--inchiostro);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--linea-soft);
+}
+.cat-titolo em { font-style: italic; color: var(--cipresso); }
+.cat-titolo .cat-emoji { margin-right: 10px; }
+
+/* FAQ item (accordion) */
+.faq-item {
+  background: var(--avorio);
+  border: 1px solid var(--linea-soft);
+  border-left: 3px solid var(--oro);
+  margin-bottom: 10px;
+  transition: all 250ms;
+}
+.faq-item:hover { background: var(--panna); border-left-color: var(--cipresso); }
+.faq-item.open { background: var(--panna); border-left-color: var(--cipresso); border-left-width: 4px; }
+.faq-domanda {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 18px 56px 18px 22px;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--inchiostro);
+  cursor: pointer;
+  position: relative;
+  line-height: 1.3;
+}
+.faq-domanda::after {
+  content: '+';
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--oro);
+  transition: transform 350ms;
+  line-height: 1;
+}
+.faq-item.open .faq-domanda::after {
+  transform: translateY(-50%) rotate(45deg);
+  color: var(--cipresso);
+}
+.faq-risposta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease, padding 400ms ease;
+  padding: 0 22px;
+}
+.faq-item.open .faq-risposta {
+  max-height: 600px;
+  padding: 0 22px 20px;
+}
+.faq-risposta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--grafite);
+  margin-bottom: 10px;
+}
+.faq-risposta p:last-child { margin-bottom: 0; }
+.faq-risposta em { color: var(--cipresso); font-style: italic; }
+.faq-risposta strong { color: var(--inchiostro); font-weight: 500; }
+.faq-risposta a {
+  color: var(--oro);
+  border-bottom: 1px solid var(--oro);
+  text-decoration: none;
+}
+.faq-risposta a:hover { color: var(--cipresso); border-bottom-color: var(--cipresso); }
+.faq-risposta ul { padding-left: 18px; margin: 8px 0; }
+.faq-risposta li { font-size: 16px; color: var(--grafite); margin-bottom: 4px; }
+
+/* Chiusura */
+.faq-chiusura {
+  background: linear-gradient(180deg, var(--avorio) 0%, var(--panna) 100%);
+  padding: 64px 24px;
+  text-align: center;
+  border-top: 1px solid var(--linea-soft);
+}
+.chiusura-emoji {
+  font-size: 56px;
+  margin-bottom: 14px;
+}
+.chiusura-titolo {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 32px;
+  color: var(--inchiostro);
+  margin-bottom: 14px;
+}
+.chiusura-corpo {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--grafite);
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+.chiusura-cta {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cta-btn {
+  padding: 14px 26px;
+  border: 1px solid var(--inchiostro);
+  background: transparent;
+  color: var(--inchiostro);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms;
+}
+.cta-btn:hover { background: var(--inchiostro); color: var(--panna); }
+.cta-btn.cta-primary { background: var(--inchiostro); color: var(--oro); border-color: var(--inchiostro); }
+.cta-btn.cta-primary:hover { background: var(--oro); color: var(--inchiostro); border-color: var(--oro); }
+
+/* Footer */
+.page-footer {
+  background: var(--inchiostro);
+  color: var(--panna);
+  padding: 32px 24px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+.page-footer strong { color: var(--oro); font-style: normal; }
+.page-footer a { color: var(--oro); border-bottom: 1px solid var(--oro); }
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--polvere);
+  display: none;
+}
+.no-results.show { display: block; }
+
+html,body{touch-action:pan-x pan-y;}
+</style>
+  <style id="tema-stellato">
+  /* TEMA STELLATO — bianco, hairline (coerente con index) */
+  body { font-weight: 380; }
+  header, .storia-header { background: rgba(253,253,251,.92) !important; border-bottom: 1px solid #ECE7DC !important; box-shadow: none !important; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .btn-primario { background: var(--inchiostro) !important; color: #FDFDFB !important; border-radius: 0 !important; letter-spacing: .24em !important; }
+  .btn-primario:hover { background: var(--oro) !important; color: var(--inchiostro) !important; }
+  /* — Header e menu unificati (modello catering) — */
+  .cat-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(253,253,251,.92);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid #ECE7DC;
+    padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  .cat-header .back-link {
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--inchiostro); text-decoration: none;
+    font-weight: 500; transition: color 200ms;
+  }
+  .cat-header .back-link:hover { color: var(--oro); }
+  .cat-header .logo-link img { height: 42px; width: auto; display: block; }
+  .cat-header .tel {
+    font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: .05em;
+    font-variant-numeric: tabular-nums lining-nums; font-feature-settings: "tnum" 1, "lnum" 1;
+    color: var(--inchiostro); text-decoration: none;
+    border-bottom: 1px solid var(--oro); padding-bottom: 1px;
+  }
+  @media (max-width: 640px) {
+    .cat-header { padding: 12px 16px; }
+    .cat-header .tel { display: none; }
+    .cat-header .back-link { font-size: 10px; }
+    .cat-header .logo-link img { height: 36px; }
+  }
+  .bgmenu-ov{position:fixed;inset:0;background:rgba(26,22,18,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:998;}
+  .bgmenu-ov.open{opacity:1;pointer-events:auto;}
+  .bgmenu{position:fixed;top:0;right:0;height:100%;width:min(320px,84vw);background:#FDFDFB;z-index:999;transform:translateX(100%);transition:transform .3s cubic-bezier(.22,.61,.36,1);border-left:1px solid #E0DACB;display:flex;flex-direction:column;padding:64px 28px 28px;box-sizing:border-box;overflow-y:auto;}
+  .bgmenu.open{transform:translateX(0);}
+  .bgmenu a{font-family:'Playfair Display',serif;font-size:19px;color:#1A1612;text-decoration:none;padding:10px 0;border-bottom:1px solid #F1EEE6;}
+  .bgmenu a:hover{color:var(--oro);}
+  .bgmenu-close{position:absolute;top:14px;right:18px;background:none;border:0;font-size:26px;cursor:pointer;color:#1A1612;line-height:1;}
+  .bgmenu-tel{margin-top:auto;padding-top:18px;border-bottom:0 !important;}
+  .bgmenu-tel span{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#A8843C;font-weight:600;margin-bottom:6px;}
+  .bgmenu-tel a{font-family:'Inter',sans-serif !important;font-size:15px !important;border-bottom:0 !important;font-variant-numeric:tabular-nums lining-nums;}
+  </style>
+</head>
+<body>
+
+<header class="cat-header">
+  <a href="index.html" class="back-link" aria-label="Torna alla home">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M9 3 L4 7 L9 11"/>
+    </svg>
+    Torna al sito
+  </a>
+  <a href="index.html" class="logo-link" aria-label="Il Buongustaio">
+    <img src="il_buongustaio_logo_3d.svg" alt="Il Buongustaio Gastronomia" onerror="this.onerror=null;this.src='il_buongustaio_logo_scuro.png';">
+  </a>
+  <a href="tel:+390574593398" class="tel">0574 593398</a>
+  <button class="bgmenu-toggle" id="bgmenuToggle" aria-label="Apri menu" style="background:none;border:0;cursor:pointer;color:inherit;padding:6px;display:flex;align-items:center;margin-left:10px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+</header>
+
+<section class="faq-hero">
+  <p class="occhiello">Domande frequenti</p>
+  <h1>Risposte <em>rapide</em>.</h1>
+  <p class="sub">
+    Tutto quello che ci chiedono al telefono ogni giorno, tutto qui sotto.
+    Se non trovi la tua, chiamaci o scrivici su WhatsApp.
+  </p>
+</section>
+
+<div class="faq-quick">
+  <div class="search-box">
+    <input type="text" id="faq-search" placeholder="Cerca una domanda... (es. consegna, vegano, pesce)">
+  </div>
+  <div class="cat-chips">
+    <button class="cat-chip active" data-cat="all">Tutte</button>
+    <button class="cat-chip" data-cat="ordini">Ordini</button>
+    <button class="cat-chip" data-cat="prodotti">Prodotti</button>
+    <button class="cat-chip" data-cat="pagamento">Pagamento</button>
+    <button class="cat-chip" data-cat="allergie">Allergie</button>
+    <button class="cat-chip" data-cat="feste">Feste</button>
+  </div>
+</div>
+
+<div class="faq-wrap">
+
+  <p class="no-results" id="no-results">Nessuna domanda corrisponde alla ricerca. <em>Prova con un'altra parola o chiamaci direttamente.</em></p>
+
+  <!-- ============ ORDINI / PRENOTAZIONI ============ -->
+  <section class="faq-categoria" data-cat="ordini">
+    <h2 class="cat-titolo"><span class="cat-emoji">📞</span>Ordini e <em>prenotazioni</em></h2>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Si può prenotare per telefono o WhatsApp?</button>
+      <div class="faq-risposta">
+        <p>
+          <strong>Certo, ed è il modo che preferiamo.</strong> Chiama lo
+          <a href="tel:+390574593398">0574 593398</a> oppure scrivici su WhatsApp.
+          Ti rispondiamo entro qualche minuto, tranne quando c'è la fila al banco
+          alle 12:30 — in quel caso ti richiamiamo noi.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Posso ritirare anche il giorno stesso?</button>
+      <div class="faq-risposta">
+        <p>
+          <em>Dipende cosa.</em> Salumi, formaggi, schiacciata, prodotti del banco: sì,
+          basta passare. Per le <strong>lasagne</strong> conviene chiamare al mattino,
+          perché finiscono quasi sempre entro le 13. Per le feste (Natale, Pasqua)
+          servono almeno <strong>2-3 giorni di anticipo</strong>. A <strong>Ferragosto</strong>
+          siamo chiusi: di solito dall'11 al 18 agosto. Le date precise le pubblichiamo
+          a luglio sul sito.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Consegnate a domicilio?</button>
+      <div class="faq-risposta">
+        <p>
+          Non abitualmente. Siamo una bottega di quartiere, non un servizio di delivery.
+          <em>Però</em>, se sei in zona Mezzana / via Catani / via Curtatone e ordini
+          oltre €50, possiamo organizzare una consegna a piedi nel pomeriggio.
+          Per ordini grossi (aziendali, banchetti) ne parliamo caso per caso.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Posso annullare o modificare un ordine?</button>
+      <div class="faq-risposta">
+        <p>
+          Sì, basta avvisarci almeno il <strong>giorno prima</strong> del ritiro previsto.
+          Per gli ordini di festa (pandori, cesti, colombe) ti chiediamo di darci più
+          preavviso possibile, perché lavoriamo su prenotazioni precise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODOTTI ============ -->
+  <section class="faq-categoria" data-cat="prodotti">
+    <h2 class="cat-titolo"><span class="cat-emoji">🍝</span>I nostri <em>prodotti</em></h2>
+
+    <div class="faq-item">
+      <button class="faq-domanda">A che ora arrivano le lasagne pronte?</button>
+      <div class="faq-risposta">
+        <p>
+          Doppio sfornamento ogni giorno: <strong>11:30 e 18:00</strong>.
+          Quelle del pranzo finiscono quasi sempre entro le 13. Se ne vuoi sicura,
+          chiama Paola al mattino e te ne mettiamo da parte una porzione.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Quando arriva il pesce fresco?</button>
+      <div class="faq-risposta">
+        <p>
+          <strong>Ogni venerdì</strong> dall'alba. Vongole di Goro, gamberi rossi di
+          Mazara, sarde marinate, baccalà. <em>Il giovedì sera è il momento giusto
+          per prenotare.</em> Dalle 11 alle 13 del venerdì facciamo anche la nostra
+          <strong>degustazione "Aroma del Mare"</strong>: 3 assaggi + un calice a €16.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Avete prodotti vegani o senza derivati animali?</button>
+      <div class="faq-risposta">
+        <p>
+          Qualcosa sì: la nostra pasta al pomodoro, le verdure al forno, i contorni di
+          stagione, il pane casereccio, la schiacciata, l'olio EVO. Non siamo un negozio
+          specializzato vegano, però — quindi non avrai la stessa scelta che troveresti
+          in una bottega bio. <em>Chiama prima per sentire cosa abbiamo.</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Avete prodotti senza glutine?</button>
+      <div class="faq-risposta">
+        <p>
+          Sì, ma con onestà: <strong>non siamo certificati AIC</strong>. I nostri salumi,
+          molti formaggi, le carni e l'olio sono naturalmente senza glutine. Per pasta,
+          pane e schiacciata <em>non</em> li produciamo gluten-free.
+        </p>
+        <p>
+          Se sei celiaco/celiaca, leggi la pagina dedicata
+          <a href="allergeni.html">Allergeni e procedure</a>: lavoriamo in ambiente
+          condiviso, quindi serve sempre verifica al banco.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Da dove vengono i vostri vini?</button>
+      <div class="faq-risposta">
+        <p>
+          Carmignano DOCG dalla <strong>Tenuta di Capezzana</strong>, Pinot Nero
+          del <strong>Marchese Pancrazi</strong>, vini di piccoli produttori toscani
+          e qualche francese di cantina (Borgogna soprattutto). Scelti uno per uno
+          da Gianni e Lorenzo. <em>Carmignano DOCG è una delle prime denominazioni
+          d'origine del mondo, dal 1716 — siamo a Carmignano, è il nostro vino.</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Avete la mortadella di Prato IGP vera?</button>
+      <div class="faq-risposta">
+        <p>
+          <strong>Sì, certo.</strong> È uno dei nostri prodotti identitari.
+          Lavorata dai macellai pratesi storici, ricetta del Cinquecento: pistacchi,
+          coriandolo, e l'amarena dell'Alkermes che le dà quella nota dolce
+          inconfondibile. <em>Diversa dalla mortadella di Bologna — più speziata, rosa
+          più chiaro, "personalità" più decisa.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGAMENTO ============ -->
+  <section class="faq-categoria" data-cat="pagamento">
+    <h2 class="cat-titolo"><span class="cat-emoji">💳</span>Pagamenti e <em>buoni</em></h2>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Accettate carte di credito?</button>
+      <div class="faq-risposta">
+        <p>
+          Sì, tutte: Visa, Mastercard, Maestro, contactless, Apple Pay, Google Pay.
+          POS al banco, sempre attivo. Anche contanti, ovviamente.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Accettate buoni pasto?</button>
+      <div class="faq-risposta">
+        <p>
+          <strong>Sì.</strong> Ticket Restaurant, Edenred, Pellegrini, Day, Sodexo,
+          UpDay. Comprese le versioni digitali da app.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Fate la fattura elettronica?</button>
+      <div class="faq-risposta">
+        <p>
+          Certo. Lasciaci il codice destinatario o l'indirizzo PEC al momento del
+          pagamento e la fattura arriva entro 24 ore. Per ordini aziendali ricorrenti
+          ti facciamo anche un riepilogo mensile.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ALLERGIE / SICUREZZA ============ -->
+  <section class="faq-categoria" data-cat="allergie">
+    <h2 class="cat-titolo"><span class="cat-emoji">⚠️</span>Allergie e <em>sicurezza</em></h2>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Come gestite gli allergeni?</button>
+      <div class="faq-risposta">
+        <p>
+          Seguiamo il Reg. UE 1169/2011 con scheda allergeni esposta al banco e
+          pubblicata online. Tutti i 14 allergeni UE sono tracciati per ogni prodotto.
+        </p>
+        <p>
+          <strong>Vai alla pagina dedicata</strong>:
+          <a href="allergeni.html">Allergeni e procedure</a> — c'è tutto, incluse
+          le nostre procedure HACCP e il sistema di abbattimento del pesce.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Usate l'abbattitore per il pesce crudo?</button>
+      <div class="faq-risposta">
+        <p>
+          <strong>Sì, sempre.</strong> Tutto il pesce destinato al consumo crudo o
+          semi-crudo (bottarga, sarde marinate, alici al limone) passa per legge
+          al nostro abbattitore: <em>−20°C al cuore per almeno 24 ore</em>.
+          Eliminazione totale del rischio Anisakis.
+        </p>
+        <p>
+          Dettagli completi nella pagina <a href="allergeni.html">Allergeni e procedure</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Potete preparare un piatto "senza" su richiesta?</button>
+      <div class="faq-risposta">
+        <p>
+          Spesso sì, con <strong>preavviso di 24 ore</strong>: senza lattosio,
+          senza nichel, senza glutine (con riserve), senza lievito. Chiama Paola
+          al mattino e ne parliamo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FESTE ============ -->
+  <section class="faq-categoria" data-cat="feste">
+    <h2 class="cat-titolo"><span class="cat-emoji">🎄</span>Feste e <em>occasioni</em></h2>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Quando si può ordinare il pandoro/panettone di Natale?</button>
+      <div class="faq-risposta">
+        <p>
+          Le prenotazioni di Natale aprono il <strong>1 novembre</strong> e chiudono
+          il <strong>18 dicembre</strong>. I nostri pandori e panettoni sono
+          <em>al lievito madre, 36 ore di lievitazione</em>, quindi non riusciamo
+          a fare ordini all'ultimo.
+        </p>
+        <p>
+          Vedi la sezione <a href="index.html#feste">Le Feste</a> in homepage.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Fate cesti regalo e cestini natalizi?</button>
+      <div class="faq-risposta">
+        <p>
+          Sì, è una specialità della casa. <strong>Tre formati standard</strong>
+          (Piccolo €65, Medio €90, Grande €120) ma possiamo comporli su misura.
+          Salumi, formaggi, vini, conserve, pasta, olio. Confezione in vimini
+          o cartone con nastro. Sono i nostri regali aziendali più richiesti.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Fate catering per eventi e cene aziendali?</button>
+      <div class="faq-risposta">
+        <p>
+          Sì, fino a 40-50 persone per banchetti freddi e aperitivi. Vassoi di salumi
+          e formaggi, antipasti misti, primi freddi (insalata di farro, vitello tonnato),
+          schiacciate farcite. <em>Per tutto quello che richiede cuoco sul posto,
+          collaboriamo con catering esterni</em>. Chiama Rossana per un preventivo.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Posso prenotare una degustazione privata?</button>
+      <div class="faq-risposta">
+        <p>
+          Su prenotazione, sì. <strong>"Aroma del Mare"</strong> è la degustazione
+          fissa del venerdì (€16 a persona). Su richiesta organizziamo degustazioni
+          di salumi, formaggi, vini di Carmignano per gruppi di 4-12 persone.
+          Costo da concordare in base ai prodotti.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-domanda">Quanto durano i piatti pronti?</button>
+      <div class="faq-risposta">
+        <p>
+          I piatti caldi (lasagne, pasta al forno, secondi): <strong>fino a 3 giorni
+          in frigo</strong> a 4°C, in contenitore chiuso. Salumi affettati:
+          <strong>2-3 giorni</strong> in carta forno o vaschetta sigillata.
+          Formaggi: dipende dal tipo, da 1 settimana (freschi) a 3-4 settimane (stagionati).
+        </p>
+        <p>
+          <em>Comunque, sono tutti pensati per essere mangiati al massimo dopo 2-3 giorni.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="faq-chiusura">
+  <p class="chiusura-emoji">💬</p>
+  <p class="chiusura-titolo">Non hai trovato <em>quello che cercavi</em>?</p>
+  <p class="chiusura-corpo">
+    Chiamaci o scrivici su WhatsApp. <em>Risponde Rossana, Gianni o Lorenzo,
+    in base a chi è al banco in quel momento.</em>
+  </p>
+  <div class="chiusura-cta">
+    <a href="tel:+390574593398" class="cta-btn cta-primary">📞 0574 593398</a>
+    <a href="https://wa.me/393462236367?text=Buongiorno!%20Avrei%20una%20domanda..." target="_blank" rel="noopener" class="cta-btn">💬 WhatsApp</a>
+    <a href="index.html" class="cta-btn">← Torna alla bottega</a>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <p>
+    <strong>Il Buongustaio</strong> di Bindi Gianni e C. Snc · Via Catani 38/40 · 59100 Prato · <a href="tel:+390574593398">0574 593398</a>
+  </p>
+</footer>
+
+<script>
+// === FAQ: accordion (clic per aprire/chiudere) ===
+document.querySelectorAll('.faq-domanda').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    // Chiudo gli altri (accordion strict, opzionale)
+    // document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+    item.classList.toggle('open', !isOpen);
+  });
+});
+
+// === Categorie chip ===
+document.querySelectorAll('.cat-chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.cat-chip').forEach(function(c){ c.classList.remove('active'); });
+    chip.classList.add('active');
+    var cat = chip.dataset.cat;
+    document.querySelectorAll('.faq-categoria').forEach(function(c){
+      if (cat === 'all') c.style.display = '';
+      else c.style.display = c.dataset.cat === cat ? '' : 'none';
+    });
+    document.getElementById('no-results').classList.remove('show');
+    document.getElementById('faq-search').value = '';
+    // Chiudo tutti gli aperti per pulizia
+    document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+  });
+});
+
+// === Ricerca testuale live ===
+var searchInput = document.getElementById('faq-search');
+var noResults = document.getElementById('no-results');
+searchInput.addEventListener('input', function(){
+  var q = searchInput.value.trim().toLowerCase();
+  if (q.length < 2) {
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.style.display = ''; });
+    document.querySelectorAll('.faq-categoria').forEach(function(c){ c.style.display = ''; });
+    noResults.classList.remove('show');
+    return;
+  }
+  // Reset categorie a "tutte" durante ricerca
+  document.querySelectorAll('.cat-chip').forEach(function(c){ c.classList.remove('active'); });
+  document.querySelector('.cat-chip[data-cat="all"]').classList.add('active');
+
+  var anyFound = false;
+  document.querySelectorAll('.faq-categoria').forEach(function(cat){
+    var anyInCat = false;
+    cat.querySelectorAll('.faq-item').forEach(function(item){
+      var text = (item.textContent || '').toLowerCase();
+      var match = text.indexOf(q) !== -1;
+      item.style.display = match ? '' : 'none';
+      if (match) { anyInCat = true; anyFound = true; }
+    });
+    cat.style.display = anyInCat ? '' : 'none';
+  });
+  noResults.classList.toggle('show', !anyFound);
+});
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+<div class="bgmenu-ov" id="bgmenuOv"></div>
+<nav class="bgmenu" id="bgmenu" aria-label="Menu">
+  <button class="bgmenu-close" id="bgmenuClose" aria-label="Chiudi menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#oggi-al-banco">Oggi al banco</a>
+  <a href="index.html#bottega">La Bottega</a>
+  <a href="index.html#mystery">Le scatole chiuse</a>
+  <a href="catering.html">Catering</a>
+  <a href="storia.html">La Storia</a>
+  <a href="faq.html">Domande frequenti</a>
+  <a href="allergeni.html">Allergeni</a>
+  <a href="index.html#trovaci">Trovaci</a>
+  <div class="bgmenu-tel"><span>Chiamaci</span><a href="tel:+390574593398">0574 593398</a></div>
+</nav>
+<script>
+(function(){var t=document.getElementById('bgmenuToggle'),o=document.getElementById('bgmenuOv'),m=document.getElementById('bgmenu'),c=document.getElementById('bgmenuClose');
+if(!t||!m)return;
+function ap(){o.classList.add('open');m.classList.add('open');}
+function ch(){o.classList.remove('open');m.classList.remove('open');}
+t.onclick=ap;c.onclick=ch;o.onclick=ch;
+})();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Catering su misura — Il Buongustaio</title>
+<meta name="description" content="Matrimoni, inaugurazioni, feste, eventi aziendali: Il Buongustaio ti mette in contatto con i migliori di Prato e della Toscana. Preventivo entro 24 ore.">
+
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1A1612">
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Catering — Il Buongustaio" />
+<meta property="og:description" content="I migliori di Prato e della Toscana per il tuo evento. Preventivo entro 24 ore." />
+<meta property="og:locale" content="it_IT" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cipresso: #2E3D2F;
+  --oliva: #5A6B47;
+  --oro: #A8843C;
+  --oro-chiaro: #C9A961;
+  --pietra: #F1EEE6;
+  --avorio: #F8F6F0;
+  --panna: #FDFDFB;
+  --carta-scura: #F3F0E9;
+  --inchiostro: #1A1612;
+  --inchiostro-soft: #5A4632;
+  --carmignano: #6B1F1F;
+  --grafite: #3F3A33;
+  --polvere: #8B847A;
+  --linea-soft: rgba(168, 132, 60, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--panna);
+  color: var(--inchiostro);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+/* === Header minimale === */
+.cat-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(253,253,251,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--linea-soft);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cat-header .back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--inchiostro);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 200ms;
+}
+.cat-header .back-link:hover { color: var(--oro); }
+.cat-header .logo-link img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+.cat-header .tel {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--inchiostro);
+  text-decoration: none;
+  border-bottom: 1px solid var(--oro);
+  padding-bottom: 1px;
+}
+@media (max-width: 640px) {
+  .cat-header { padding: 12px 16px; }
+  .cat-header .tel { display: none; }
+  .cat-header .logo-link img { height: 36px; }
+}
+
+/* === Hero catering === */
+.cat-hero {
+  padding: 64px 24px 32px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--panna) 0%, var(--avorio) 100%);
+  border-bottom: 1px solid var(--linea-soft);
+  position: relative;
+}
+.cat-hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 4px;
+  background: var(--oro);
+}
+@media (min-width: 768px) { .cat-hero { padding: 96px 32px 48px; } }
+.cat-hero .overline {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--oro);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.cat-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--inchiostro);
+  margin-bottom: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) { .cat-hero h1 { font-size: 72px; } }
+@media (min-width: 1024px) { .cat-hero h1 { font-size: 96px; } }
+.cat-hero h1 em { font-style: italic; color: var(--cipresso); }
+.cat-hero .lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--grafite);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* === Sezione catering corpo === */
+.section-catering {
+  padding: 56px 24px;
+  background: var(--panna);
+}
+@media (min-width: 1024px) { .section-catering { padding: 80px 32px; } }
+.section-catering .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catering-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .catering-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
+}
+
+.catering-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--oro);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.catering-cosa {
+  background: var(--panna);
+  padding: 32px;
+  border: 1px solid var(--linea-soft);
+  border-top: 3px solid var(--oro);
+}
+.catering-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catering-lista li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--inchiostro);
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--linea-soft);
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.catering-lista li:last-child { border-bottom: 0; }
+.catering-lista .bullet-oro {
+  color: var(--oro);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.catering-form {
+  background: var(--avorio);
+  padding: 32px;
+  border: 1px solid var(--linea-soft);
+  border-top: 3px solid var(--cipresso);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.catering-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 540px) {
+  .catering-form-row { grid-template-columns: 1fr; }
+}
+.catering-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.catering-field span {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--polvere);
+  font-weight: 500;
+}
+.catering-field input,
+.catering-field select,
+.catering-field textarea {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  padding: 10px 12px;
+  background: var(--panna);
+  border: 1px solid var(--linea-soft);
+  color: var(--inchiostro);
+  transition: border 200ms;
+  width: 100%;
+}
+.catering-field input:focus,
+.catering-field select:focus,
+.catering-field textarea:focus {
+  outline: none;
+  border-color: var(--oro);
+}
+.catering-field textarea {
+  resize: vertical;
+  font-style: italic;
+}
+.btn-primario {
+  background: var(--inchiostro);
+  color: var(--panna);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 14px 24px;
+  border: 1px solid var(--inchiostro);
+  cursor: pointer;
+  transition: all 250ms;
+}
+.btn-primario:hover {
+  background: var(--cipresso);
+  border-color: var(--cipresso);
+}
+.catering-submit { margin-top: 8px; }
+.catering-form-hint {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--polvere);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.catering-form-hint a {
+  color: var(--oro);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+}
+
+.catering-grazie {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px 32px;
+  background: var(--cipresso);
+  color: var(--panna);
+  border-top: 3px solid var(--oro);
+}
+.catering-grazie .grazie-glyph {
+  font-size: 56px;
+  color: var(--oro);
+  margin-bottom: 18px;
+  line-height: 1;
+}
+.catering-grazie h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+.catering-grazie p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(240, 234, 216, 0.9);
+  margin-bottom: 28px;
+}
+
+/* === Footer minimale === */
+.cat-footer {
+  background: var(--inchiostro);
+  color: var(--panna);
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 3px solid var(--oro);
+}
+.cat-footer p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(240, 234, 216, 0.7);
+  margin: 6px 0;
+}
+.cat-footer p strong {
+  color: var(--oro-chiaro);
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.cat-footer a {
+  color: var(--oro-chiaro);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* === Hero image band === */
+.cat-hero-foto { max-width: 1200px; margin: 0 auto; padding: 32px 24px 0; }
+.cat-hero-foto img {
+  width: 100%; height: 360px; object-fit: cover; display: block;
+  border: 1px solid var(--linea-soft); border-top: 3px solid var(--oro);
+}
+@media (max-width: 640px) { .cat-hero-foto { padding: 20px 16px 0; } .cat-hero-foto img { height: 220px; } }
+
+/* === Offerta per categorie === */
+.catering-intro {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; line-height: 1.6; color: var(--grafite); margin-bottom: 24px;
+}
+.catering-cat { margin: 24px 0 4px; }
+.catering-cat:first-of-type { margin-top: 0; }
+.catering-cat-titolo {
+  font-family: 'Playfair Display', serif; font-weight: 500; font-size: 18px;
+  color: var(--cipresso); margin-bottom: 4px; display: flex; align-items: baseline; gap: 10px;
+}
+.catering-cat-titolo .lux {
+  font-family: 'Inter', sans-serif; font-size: 8px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--oro); font-weight: 600;
+  border: 1px solid var(--linea-soft); padding: 2px 6px; line-height: 1; white-space: nowrap;
+}
+.catering-nota {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14.5px;
+  line-height: 1.55; color: var(--polvere); margin-top: 22px; padding-top: 16px;
+  border-top: 1px dashed var(--linea-soft);
+}
+
+/* === Galleria === */
+.cat-galleria { max-width: 1200px; margin: 0 auto; padding: 40px 24px 0; }
+.cat-galleria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 760px) { .cat-galleria-grid { grid-template-columns: 1fr; gap: 14px; } }
+.cat-foto figure { margin: 0; }
+.cat-foto img {
+  width: 100%; height: 240px; object-fit: cover; object-position: center; display: block;
+  border: 1px solid var(--linea-soft);
+}
+/* la foto del Pata Negra e' verticale: ratio naturale, mai schiacciata */
+.cat-foto figure.foto-verticale img { height: auto; aspect-ratio: 4 / 5; max-height: 460px; }
+@media (max-width: 760px) { .cat-foto img { height: 220px; } .cat-foto figure.foto-verticale img { height: auto; } .cat-foto { grid-template-columns: 1fr !important; } }
+.cat-foto figcaption {
+  font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--polvere); font-weight: 500;
+  margin-top: 10px; text-align: center;
+}
+
+html,body{touch-action:pan-x pan-y;}
+</style>
+
+  <style id="tema-stellato">
+  /* TEMA STELLATO — bianco, hairline (coerente con index) */
+  body { font-weight: 380; }
+  header, .storia-header { background: rgba(253,253,251,.92) !important; border-bottom: 1px solid #ECE7DC !important; box-shadow: none !important; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .btn-primario { background: var(--inchiostro) !important; color: #FDFDFB !important; border-radius: 0 !important; letter-spacing: .24em !important; }
+  .btn-primario:hover { background: var(--oro) !important; color: var(--inchiostro) !important; }
+  </style>
+</head>
+<body>
+
+<!-- ===== Header minimale ===== -->
+<header class="cat-header">
+  <a href="index.html" class="back-link" aria-label="Torna alla home">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M9 3 L4 7 L9 11"/>
+    </svg>
+    Torna al sito
+  </a>
+  <a href="index.html" class="logo-link" aria-label="Il Buongustaio">
+    <img src="il_buongustaio_logo_3d.svg" alt="Il Buongustaio Gastronomia" onerror="this.onerror=null;this.src='il_buongustaio_logo_scuro.png';">
+  </a>
+  <a href="tel:+390574593398" class="tel">0574 593398</a>
+  <button class="bgmenu-toggle" id="bgmenuToggle" aria-label="Apri menu" style="background:none;border:0;cursor:pointer;color:inherit;padding:6px;display:flex;align-items:center;margin-left:10px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+</header>
+
+
+<!-- ===== Hero ===== -->
+<section class="cat-hero">
+  <p class="overline">il buongustaio · per i tuoi eventi</p>
+  <h1>Prenota un <em>catering.</em></h1>
+  <p class="lead">
+    Matrimoni, inaugurazioni, compleanni, eventi aziendali.
+    Ti mettiamo in contatto con i migliori di Prato e della Toscana.
+  </p>
+</section>
+
+<div class="cat-hero-foto">
+  <img src="assets/foto/catering-tavola.jpg" alt="Tavola da catering in giardino: torte salate, salumi, formaggi e champagne" loading="lazy" onerror="this.parentNode.style.display='none'">
+</div>
+
+
+
+
+<!-- ===== Sezione catering ===== -->
+<section class="section-catering">
+  <div class="wrap">
+
+    <div class="catering-desc" style="max-width:700px;">
+      <p class="catering-label">come funziona</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.65;color:var(--grafite);margin:14px 0 18px;">Il catering non nasce dal nostro banco: nasce dalla nostra rubrica. In quasi quarant’anni di bottega abbiamo imparato chi, a Prato e in Toscana, lavora davvero bene. Il Buongustaio ti mette in contatto con i migliori, per un servizio di alta qualità su ogni esigenza — carne, pesce, dolce, vino — seguito con la stessa cura con cui scegliamo quello che mettiamo sul banco.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.65;color:var(--grafite);margin:0 0 30px;">Matrimoni, inaugurazioni, feste private, ricorrenze, eventi aziendali: dicci la data, gli ospiti e che aria vuoi dare alla tavola. Selezioniamo per te il servizio giusto e ti prepariamo un preventivo entro 24 ore.</p>
+      <a href="tel:+390574593398" class="btn-primario">Chiamaci · 0574 593398</a>
+    </div>
+
+    <div class="cat-foto" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:54px;max-width:860px;">
+      <figure>
+        <img src="assets/foto/catering-coppe.jpg" alt="Alzata di panini imbottiti, coppe di bollicine e tagliere di prosciutto" loading="lazy" onerror="this.parentNode.style.display='none'">
+        <figcaption>Rinfreschi · aperitivi in giardino</figcaption>
+      </figure>
+      <figure class="foto-verticale">
+        <img src="assets/foto/pata-negra-grande.jpg" alt="Pata Negra tagliato a coltello" loading="lazy" onerror="this.parentNode.style.display='none'">
+        <figcaption>Il Pata Negra · tagliato a coltello</figcaption>
+      </figure>
+    </div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--polvere);margin-top:10px;">Immagini illustrative generate con intelligenza artificiale.</p>
+
+    <div style="max-width:700px;margin-top:54px;">
+      <form class="catering-form" id="catering-form" novalidate>
+        <p class="catering-label">richiedi un preventivo</p>
+
+        <div class="catering-form-row">
+          <label class="catering-field">
+            <span>Il tuo nome</span>
+            <input type="text" name="nome" required placeholder="Mario Rossi">
+          </label>
+          <label class="catering-field">
+            <span>Telefono</span>
+            <input type="tel" name="telefono" required placeholder="335 1234567">
+          </label>
+        </div>
+
+        <label class="catering-field">
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="mario@email.it">
+        </label>
+
+        <div class="catering-form-row">
+          <label class="catering-field">
+            <span>Data evento</span>
+            <input type="date" name="data" required>
+          </label>
+          <label class="catering-field">
+            <span>Numero persone</span>
+            <input type="number" name="persone" required min="5" max="500" placeholder="40">
+          </label>
+        </div>
+
+        <label class="catering-field">
+          <span>Budget indicativo</span>
+          <select name="budget" required>
+            <option value="">Scegli una fascia</option>
+            <option value="200-500">Fino a €500</option>
+            <option value="500-1000">€500 – €1.000</option>
+            <option value="1000-2000">€1.000 – €2.000</option>
+            <option value="2000-5000">€2.000 – €5.000</option>
+            <option value="5000+">Oltre €5.000</option>
+            <option value="da-definire">Da definire insieme</option>
+          </select>
+        </label>
+
+        <label class="catering-field">
+          <span>Tipo di evento</span>
+          <select name="tipo" required>
+            <option value="">Scegli</option>
+            <option value="compleanno">Compleanno</option>
+            <option value="battesimo">Battesimo / Comunione / Cresima</option>
+            <option value="laurea">Laurea</option>
+            <option value="aziendale">Evento aziendale / Inaugurazione</option>
+            <option value="matrimonio">Matrimonio (rinfresco)</option>
+            <option value="banchetto">Banchetto privato</option>
+            <option value="altro">Altro</option>
+          </select>
+        </label>
+
+        <label class="catering-field">
+          <span>Allergie o richieste particolari</span>
+          <textarea name="note" rows="3" placeholder="Es. due ospiti celiaci, una persona vegetariana, no maiale, vini biologici..."></textarea>
+        </label>
+
+        <button type="submit" class="btn-primario catering-submit">
+          Richiedi preventivo →
+        </button>
+
+        <p class="catering-form-hint">
+          Ti rispondiamo entro <strong>24 ore</strong> con un preventivo dettagliato.<br>
+          Oppure chiama direttamente: <a href="tel:+390574593398">0574 593398</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Schermo grazie (mostrato dopo invio) -->
+    <div class="catering-grazie" id="catering-grazie" style="display:none; margin-top:40px;">
+      <div class="grazie-glyph">✓</div>
+      <h3>Grazie!</h3>
+      <p>La tua richiesta è arrivata.<br>
+      Ti rispondiamo entro 24 ore con un preventivo su misura.</p>
+      <button type="button" class="btn-primario" id="catering-grazie-close">Chiudi</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== Footer minimale ===== -->
+<footer class="cat-footer">
+  <p><strong>Il Buongustaio · Gastronomia · Enoteca · Cacioteca</strong></p>
+  <p>Via Giuseppe Catani 38, 59100 Prato</p>
+  <p>Lun–Sab 7:30–14:30 / 17:00–20:00 · Dom chiuso</p>
+  <p><a href="tel:+390574593398">0574 593398</a> · <a href="mailto:sncbuongustaio@gmail.com">sncbuongustaio@gmail.com</a></p>
+  <p style="margin-top:24px;font-size:13px;"><a href="index.html">← Torna alla home</a></p>
+</footer>
+
+
+<!-- ===== JS form submit ===== -->
+<script>
+(function(){
+  var form = document.getElementById('catering-form');
+  var grazie = document.getElementById('catering-grazie');
+  var grazieClose = document.getElementById('catering-grazie-close');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var nome = form.nome.value.trim();
+    var telefono = form.telefono.value.trim();
+    var email = form.email.value.trim();
+    var data = form.data.value;
+    var persone = form.persone.value;
+    var budget = form.budget.value;
+    var tipo = form.tipo.value;
+    var note = form.note.value.trim();
+
+    if (!nome || !telefono || !email || !data || !persone || !budget || !tipo) {
+      alert('Per favore compila tutti i campi obbligatori.');
+      return;
+    }
+
+    var subj = encodeURIComponent('Richiesta preventivo catering · ' + tipo + ' · ' + persone + ' persone');
+    var body = encodeURIComponent(
+      'Buongiorno,\n\n' +
+      'vorrei richiedere un preventivo per un catering.\n\n' +
+      '— Nome: ' + nome + '\n' +
+      '— Telefono: ' + telefono + '\n' +
+      '— Email: ' + email + '\n' +
+      '— Data evento: ' + data + '\n' +
+      '— Numero persone: ' + persone + '\n' +
+      '— Budget: ' + budget + '\n' +
+      '— Tipo di evento: ' + tipo + '\n' +
+      '— Note / allergie: ' + (note || 'nessuna') + '\n\n' +
+      'Grazie,\n' + nome
+    );
+
+    window.location.href = 'mailto:sncbuongustaio@gmail.com?subject=' + subj + '&body=' + body;
+
+    form.style.display = 'none';
+    if (grazie) grazie.style.display = 'block';
+
+    // Scroll alla grazie
+    setTimeout(function(){
+      if (grazie) grazie.scrollIntoView({behavior:'smooth', block:'center'});
+    }, 200);
+  });
+
+  if (grazieClose) {
+    grazieClose.addEventListener('click', function(){
+      grazie.style.display = 'none';
+      form.style.display = 'flex';
+      form.reset();
+      form.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  }
+})();
+</script>
+
+
+<!-- menu a tendina -->
+<style>
+.bgmenu-ov{position:fixed;inset:0;background:rgba(26,22,18,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:998;}
+.bgmenu-ov.open{opacity:1;pointer-events:auto;}
+.bgmenu{position:fixed;top:0;right:0;height:100%;width:min(320px,84vw);background:#FDFDFB;z-index:999;transform:translateX(100%);transition:transform .3s cubic-bezier(.22,.61,.36,1);border-left:1px solid #E0DACB;overflow-y:auto;display:flex;flex-direction:column;padding:64px 28px 28px;box-sizing:border-box;}
+.bgmenu.open{transform:translateX(0);}
+.bgmenu a{font-family:'Playfair Display',serif;font-size:20px;color:#1A1612;text-decoration:none;padding:11px 0;border-bottom:1px solid rgba(168,132,60,.25);}
+.bgmenu a:hover{color:#6B1F1F;}
+.bgmenu-close{position:absolute;top:14px;right:18px;background:none;border:0;font-size:26px;cursor:pointer;color:#1A1612;line-height:1;}
+.bgmenu-tel{margin-top:auto;padding-top:18px;}
+.bgmenu-tel span{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#A8843C;font-weight:600;margin-bottom:6px;}
+.bgmenu-tel a{font-family:'Playfair Display',serif;font-size:22px;color:#1A1612;text-decoration:none;border:0;padding:0;}
+</style>
+<div class="bgmenu-ov" id="bgmenuOv"></div>
+<nav class="bgmenu" id="bgmenu" aria-label="Menu">
+  <button class="bgmenu-close" id="bgmenuClose" aria-label="Chiudi menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#oggi-al-banco">Oggi al banco</a>
+  <a href="index.html#bottega">La Bottega</a>
+  <a href="index.html#mystery">Le scatole chiuse</a>
+  <a href="catering.html">Catering</a>
+  <a href="storia.html">La Storia</a>
+  <a href="faq.html">Domande frequenti</a>
+  <a href="allergeni.html">Allergeni</a>
+  <a href="index.html#trovaci">Trovaci</a>
+  <div class="bgmenu-tel"><span>Chiamaci</span><a href="tel:+390574593398">0574 593398</a></div>
+</nav>
+<script>
+(function(){var t=document.getElementById('bgmenuToggle'),o=document.getElementById('bgmenuOv'),m=document.getElementById('bgmenu'),c=document.getElementById('bgmenuClose');
+if(!t||!m)return;
+function ap(){o.classList.add('open');m.classList.add('open');}
+function ch(){o.classList.remove('open');m.classList.remove('open');}
+t.onclick=ap;c.onclick=ch;o.onclick=ch;
+})();
+</script>
+
+</body>
+</html>
